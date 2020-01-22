@@ -1,0 +1,17 @@
+C:\Users\marin\Source\Repos\ConsoleList\ConsoleList\ConsoleList\bin\Debug\ConsoleList.exe
+C:\Users\marin\Source\Repos\ConsoleList\ConsoleList\ConsoleList\bin\Debug\ConsoleList.pdb
+C:\Users\marin\Source\Repos\ConsoleList\ConsoleList\ConsoleList\obj\Debug\ConsoleList.csprojAssemblyReference.cache
+C:\Users\marin\Source\Repos\ConsoleList\ConsoleList\ConsoleList\obj\Debug\ConsoleList.Form1.resources
+C:\Users\marin\Source\Repos\ConsoleList\ConsoleList\ConsoleList\obj\Debug\ConsoleList.Properties.Resources.resources
+C:\Users\marin\Source\Repos\ConsoleList\ConsoleList\ConsoleList\obj\Debug\ConsoleList.csproj.GenerateResource.cache
+C:\Users\marin\Source\Repos\ConsoleList\ConsoleList\ConsoleList\obj\Debug\ConsoleList.csproj.CoreCompileInputs.cache
+C:\Users\marin\Source\Repos\ConsoleList\ConsoleList\ConsoleList\obj\Debug\ConsoleList.exe
+C:\Users\marin\Source\Repos\ConsoleList\ConsoleList\ConsoleList\obj\Debug\ConsoleList.pdb
+C:\Users\Marina\ConsoleList_CSharp\ConsoleList\bin\Debug\ConsoleList.exe
+C:\Users\Marina\ConsoleList_CSharp\ConsoleList\bin\Debug\ConsoleList.pdb
+C:\Users\Marina\ConsoleList_CSharp\ConsoleList\obj\Debug\ConsoleList.csprojAssemblyReference.cache
+C:\Users\Marina\ConsoleList_CSharp\ConsoleList\obj\Debug\ConsoleList.Form1.resources
+C:\Users\Marina\ConsoleList_CSharp\ConsoleList\obj\Debug\ConsoleList.Properties.Resources.resources
+C:\Users\Marina\ConsoleList_CSharp\ConsoleList\obj\Debug\ConsoleList.csproj.GenerateResource.cache
+C:\Users\Marina\ConsoleList_CSharp\ConsoleList\obj\Debug\ConsoleList.exe
+C:\Users\Marina\ConsoleList_CSharp\ConsoleList\obj\Debug\ConsoleList.pdb
