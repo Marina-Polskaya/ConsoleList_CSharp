@@ -21,8 +21,8 @@ namespace ConsoleList
         string addLeftName = "Добавить слева";
         string selectHeadRightName = "Выделить голову справа";
         string selectHeadLeftName = "Выделить голову слева";
-        string selectTailRightName = "Выделить хвост справа";
-        string selectTailLeftName = "Выделить хвост слева";
+        string tailIfCountFromRightName = "Выделить хвост (справа налево)";
+        string tailIfCountFromLeftName = "Выделить хвост (слева направо)";
         string mergeListsName = "Соединить списки";
 
         public int Size
@@ -86,18 +86,18 @@ namespace ConsoleList
                 return selectHeadLeftName;
             }
         }
-        public string SelectTailRightName
+        public string TailIfCountFromRightName
         {
             get
             {
-                return selectTailRightName;
+                return tailIfCountFromRightName;
             }
         }
-        public string SelectTailLeftName
+        public string TailIfCountFromLeftName
         {
             get
             {
-                return selectTailLeftName;
+                return tailIfCountFromLeftName;
             }
         }
         public string MergeListsName
@@ -237,32 +237,36 @@ namespace ConsoleList
             }
         }
 
-        //public int SizeOfList() //возвращает количество элементов списка
-        //{
-        //    return size;
-        //}
-        /*public void PrintListNodes()
+        public ListNodes TailIfCountFromLeft()
         {
-            try
+            int headKey = 0;
+            if (IsListEmpty() == true || size == 1)
             {
-                if (IsListEmpty() == false)
-                {
-                    for (int i = 1; i <= this.Size; i++)
-                    {
-                        Console.WriteLine(this[i]);
-                    }
-                    Console.Write("\n");
-                }
-                else
-                {
-                    throw new Exception("cписок пуст.");
-                }
+                size = 0;
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine("Действие не выполнено. Ошибка: " + ex.Message + "\n");
-                System.Diagnostics.Process.GetCurrentProcess().Kill();
+                headKey = first.Key;
+                first = this.first.Next;
+                size--;
             }
-        }*/
+            return this;
+        }
+        public ListNodes TailIfCountFromRight()
+        {
+            int headKey = 0;
+            if (IsListEmpty() == true || size == 1)
+            {
+                size = 0;
+            }
+            else
+            {
+                headKey = last.Key;
+                last.Next = null;
+                last = PredLast();
+                size--;
+            }
+            return this;
+        }
     }
 }

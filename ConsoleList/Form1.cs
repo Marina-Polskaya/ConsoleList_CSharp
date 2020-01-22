@@ -28,8 +28,8 @@ namespace ConsoleList
             listBox2.Items.Add(MyList.AddLeftName);
             listBox2.Items.Add(MyList.SelectHeadRightName);
             listBox2.Items.Add(MyList.SelectHeadLeftName);
-            listBox2.Items.Add(MyList.SelectTailRightName);
-            listBox2.Items.Add(MyList.SelectTailLeftName);
+            listBox2.Items.Add(MyList.TailIfCountFromRightName);
+            listBox2.Items.Add(MyList.TailIfCountFromLeftName);
             listBox2.Items.Add(MyList.MergeListsName);
             listBox2.EndUpdate();
         }
@@ -159,7 +159,26 @@ namespace ConsoleList
                         PrintInBoxFromLeft(listBox3, MySelectedItem);
                     }
                 }
+                else if (listBox2.SelectedItem.ToString() == MySelectedItem.TailIfCountFromLeftName)
+                {
+                    MySelectedItem = MySelectedItem.TailIfCountFromLeft();
+                    label7.Text = "Элементы, образующие хвост (слева направо)";
+                    label5.Visible = false;
+                    textBox3.Visible = false;
+                    listBox3.Items.Clear();
+                    PrintInBoxFromLeft(listBox3, MySelectedItem);
+                }
+                else if (listBox2.SelectedItem.ToString() == MySelectedItem.TailIfCountFromRightName)
+                {
+                    MySelectedItem = MySelectedItem.TailIfCountFromRight();
+                    label7.Text = "Элементы, образующие хвост (справа налево)";
+                    label5.Visible = false;
+                    textBox3.Visible = false;
+                    listBox3.Items.Clear();
+                    PrintInBoxFromRight(listBox3, MySelectedItem);
+                    textBox2.Text = MySelectedItem.Size.ToString();
 
+                }
             }
         }       
 
@@ -255,10 +274,13 @@ namespace ConsoleList
                     textBox1.Visible = false;
                     textBox3.Visible = false;
                 }
-                else if (listBox2.SelectedItem.ToString() == MySelectedItem.SelectTailRightName
-                    || listBox2.SelectedItem.ToString() == MySelectedItem.SelectTailLeftName)
+                else if (listBox2.SelectedItem.ToString() == MySelectedItem.TailIfCountFromRightName
+                    || listBox2.SelectedItem.ToString() == MySelectedItem.TailIfCountFromLeftName)
                 {
-
+                    label3.Visible = false;
+                    textBox1.Visible = false;
+                    label5.Visible = false;
+                    textBox3.Visible = false;
                 }
                 
             }
@@ -293,6 +315,16 @@ namespace ConsoleList
                 }
                 textBox2.Text = MyList.Size.ToString();
             }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

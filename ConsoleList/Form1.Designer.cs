@@ -49,6 +49,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.listBox3 = new System.Windows.Forms.ListBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,7 +152,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(375, 270);
+            this.button4.Location = new System.Drawing.Point(426, 260);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(103, 29);
@@ -157,7 +162,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(502, 270);
+            this.button5.Location = new System.Drawing.Point(563, 260);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(96, 29);
@@ -192,7 +197,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 301);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 9, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(641, 34);
+            this.statusStrip1.Size = new System.Drawing.Size(681, 34);
             this.statusStrip1.TabIndex = 13;
             this.statusStrip1.Text = "statusStrip1";
             this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.StatusStrip1_ItemClicked);
@@ -247,9 +252,9 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(439, 18);
+            this.label7.Location = new System.Drawing.Point(423, 18);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 56);
+            this.label7.Size = new System.Drawing.Size(77, 56);
             this.label7.TabIndex = 19;
             this.label7.Text = "Элементы, начиная с головы (слева)";
             this.label7.Visible = false;
@@ -257,18 +262,65 @@
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(440, 90);
+            this.listBox3.Location = new System.Drawing.Point(426, 96);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(60, 147);
             this.listBox3.TabIndex = 20;
             this.listBox3.Visible = false;
             this.listBox3.SelectedIndexChanged += new System.EventHandler(this.ListBox3_SelectedIndexChanged);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(540, 74);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Длина";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(598, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(71, 58);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Элементы, начиная с головы (слева)";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(498, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 45);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Результирующий список";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(542, 99);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(38, 20);
+            this.textBox4.TabIndex = 24;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Location = new System.Drawing.Point(601, 96);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(58, 134);
+            this.listBox4.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 335);
+            this.ClientSize = new System.Drawing.Size(681, 335);
+            this.Controls.Add(this.listBox4);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -323,6 +375,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ListBox listBox4;
     }
 }
 
