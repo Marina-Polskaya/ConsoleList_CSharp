@@ -63,6 +63,7 @@
             this.listBox1.Location = new System.Drawing.Point(21, 39);
             this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
+            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBox1.Size = new System.Drawing.Size(119, 121);
             this.listBox1.TabIndex = 1;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.ListBox1_SelectedIndexChanged);
@@ -116,9 +117,9 @@
             this.label1.Location = new System.Drawing.Point(155, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Операции";
+            this.label1.Text = "Параметры";
             // 
             // label2
             // 
@@ -152,7 +153,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(426, 260);
+            this.button4.Location = new System.Drawing.Point(442, 260);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(103, 29);
@@ -162,7 +163,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(563, 260);
+            this.button5.Location = new System.Drawing.Point(586, 260);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(96, 29);
@@ -197,7 +198,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 301);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 9, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(681, 34);
+            this.statusStrip1.Size = new System.Drawing.Size(704, 34);
             this.statusStrip1.TabIndex = 13;
             this.statusStrip1.Text = "statusStrip1";
             this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.StatusStrip1_ItemClicked);
@@ -229,6 +230,7 @@
             this.textBox3.Size = new System.Drawing.Size(40, 20);
             this.textBox3.TabIndex = 16;
             this.textBox3.Visible = false;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label5
             // 
@@ -252,9 +254,9 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(423, 18);
+            this.label7.Location = new System.Drawing.Point(439, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 56);
+            this.label7.Size = new System.Drawing.Size(69, 56);
             this.label7.TabIndex = 19;
             this.label7.Text = "Элементы, начиная с головы (слева)";
             this.label7.Visible = false;
@@ -262,7 +264,7 @@
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(426, 96);
+            this.listBox3.Location = new System.Drawing.Point(442, 96);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(60, 147);
             this.listBox3.TabIndex = 20;
@@ -277,24 +279,27 @@
             this.label8.Size = new System.Drawing.Size(40, 13);
             this.label8.TabIndex = 21;
             this.label8.Text = "Длина";
+            this.label8.Visible = false;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(598, 16);
+            this.label9.Location = new System.Drawing.Point(621, 16);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 58);
             this.label9.TabIndex = 22;
             this.label9.Text = "Элементы, начиная с головы (слева)";
+            this.label9.Visible = false;
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(498, 18);
+            this.label10.Location = new System.Drawing.Point(521, 18);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 45);
             this.label10.TabIndex = 23;
             this.label10.Text = "Результирующий список";
+            this.label10.Visible = false;
             // 
             // textBox4
             // 
@@ -302,20 +307,24 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(38, 20);
             this.textBox4.TabIndex = 24;
+            this.textBox4.Visible = false;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // listBox4
             // 
             this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(601, 96);
+            this.listBox4.Location = new System.Drawing.Point(624, 93);
             this.listBox4.Name = "listBox4";
             this.listBox4.Size = new System.Drawing.Size(58, 134);
             this.listBox4.TabIndex = 25;
+            this.listBox4.Visible = false;
+            this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 335);
+            this.ClientSize = new System.Drawing.Size(704, 335);
             this.Controls.Add(this.listBox4);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label10);

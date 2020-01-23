@@ -268,5 +268,13 @@ namespace ConsoleList
             }
             return this;
         }
+        public void MergeLists(ListNodes MyList)
+        {
+            for (int i = 1; i <= MyList.Size; i++)
+            {
+                this.AddRight(MyList[i]);
+            }
+            MyList.CleanOutList();
+        }
     }
 }

@@ -1,4 +1,4 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     using System;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -85,8 +85,8 @@ namespace ConsoleList
             if (listBox1.SelectedIndex == -1)
             {
                 MessageBox.Show("Выберите список!");
-            }
-            else
+            }//Если выделен 1 список
+            else if (listBox1.SelectedItems.Count == 1)
             {//Проверяем, выбрана ли операция
                 ListNodes MySelectedItem = new ListNodes();
                 MySelectedItem = GetParameter<ListNodes>(listBox1.SelectedItem);
@@ -177,7 +177,25 @@ namespace ConsoleList
                     listBox3.Items.Clear();
                     PrintInBoxFromRight(listBox3, MySelectedItem);
                     textBox2.Text = MySelectedItem.Size.ToString();
-
+                }
+                else if (listBox2.SelectedItem.ToString() == MySelectedItem.MergeListsName)
+                {
+                    MessageBox.Show("Выберите два списка!");
+                }
+            }
+            else if (listBox1.SelectedItems.Count == 2)
+            {
+                ListNodes FirstSelectedItem = new ListNodes();
+                FirstSelectedItem = GetParameter<ListNodes>(listBox1.SelectedItems[0]);
+                ListNodes SecondSelectedItem = new ListNodes();
+                SecondSelectedItem = GetParameter<ListNodes>(listBox1.SelectedItems[1]);
+                if (listBox2.SelectedItem.ToString() == FirstSelectedItem.MergeListsName)
+                {
+                    label10.Text = "Результирующий список " + FirstSelectedItem.Name;
+                    textBox2.Text = FirstSelectedItem.Size.ToString();
+                    FirstSelectedItem.MergeLists(SecondSelectedItem);
+                    PrintInBoxFromLeft(listBox4, FirstSelectedItem);
+                    textBox4.Text = FirstSelectedItem.Size.ToString();
                 }
             }
         }       
@@ -265,6 +283,11 @@ namespace ConsoleList
                     label5.Visible = false;
                     textBox1.Visible = true;
                     textBox3.Visible = false;
+                    label8.Visible = false;
+                    label9.Visible = false;
+                    label10.Visible = false;
+                    textBox4.Visible = false;
+                    listBox4.Visible = false;
                 }
                 else if (listBox2.SelectedItem.ToString() == MySelectedItem.SelectHeadRightName 
                     || listBox2.SelectedItem.ToString() == MySelectedItem.SelectHeadLeftName)
@@ -273,6 +296,11 @@ namespace ConsoleList
                     label5.Visible = false;
                     textBox1.Visible = false;
                     textBox3.Visible = false;
+                    label8.Visible = false;
+                    label9.Visible = false;
+                    label10.Visible = false;
+                    textBox4.Visible = false;
+                    listBox4.Visible = false;
                 }
                 else if (listBox2.SelectedItem.ToString() == MySelectedItem.TailIfCountFromRightName
                     || listBox2.SelectedItem.ToString() == MySelectedItem.TailIfCountFromLeftName)
@@ -281,8 +309,25 @@ namespace ConsoleList
                     textBox1.Visible = false;
                     label5.Visible = false;
                     textBox3.Visible = false;
+                    label8.Visible = false;
+                    label9.Visible = false;
+                    label10.Visible = false;
+                    textBox4.Visible = false;
+                    listBox4.Visible = false;
                 }
-                
+                else if (listBox2.SelectedItem.ToString() == MySelectedItem.MergeListsName)
+                {
+                    label3.Visible = false;
+                    textBox1.Visible = false;
+                    label5.Visible = false;
+                    textBox3.Visible = false;
+                    label8.Visible = true;
+                    label9.Visible = true;
+                    label10.Visible = true;
+                    textBox4.Visible = true;
+                    listBox4.Visible = true;
+
+                }
             }
         }
         private void PrintInBoxFromRight(ListBox listBox, ListNodes MyList)
@@ -323,6 +368,21 @@ namespace ConsoleList
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
