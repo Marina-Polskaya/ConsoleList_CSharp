@@ -42,6 +42,7 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -149,7 +150,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(96, 27);
             this.textBox1.TabIndex = 10;
-            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // button4
             // 
@@ -160,6 +160,7 @@
             this.button4.TabIndex = 11;
             this.button4.Text = "Помощь";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -170,11 +171,12 @@
             this.button5.TabIndex = 12;
             this.button5.Text = "Выход";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(73, 29);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(73, 21);
             this.toolStripStatusLabel2.Text = "Назначение";
             // 
             // toolStripStatusLabel3
@@ -185,8 +187,7 @@
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.toolStripStatusLabel3.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(555, 29);
-            this.toolStripStatusLabel3.Text = "Создание нового пустого списка";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(620, 21);
             this.toolStripStatusLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // statusStrip1
@@ -194,14 +195,20 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel2,
-            this.toolStripStatusLabel3});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 301);
+            this.toolStripStatusLabel3,
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 304);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 9, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(704, 34);
+            this.statusStrip1.Size = new System.Drawing.Size(707, 26);
             this.statusStrip1.TabIndex = 13;
             this.statusStrip1.Text = "statusStrip1";
-            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.StatusStrip1_ItemClicked);
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 15);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // textBox2
             // 
@@ -210,7 +217,6 @@
             this.textBox2.Size = new System.Drawing.Size(40, 20);
             this.textBox2.TabIndex = 14;
             this.textBox2.Visible = false;
-            this.textBox2.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
             // label4
             // 
@@ -221,7 +227,6 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Длина";
             this.label4.Visible = false;
-            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // textBox3
             // 
@@ -230,7 +235,6 @@
             this.textBox3.Size = new System.Drawing.Size(40, 20);
             this.textBox3.TabIndex = 16;
             this.textBox3.Visible = false;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label5
             // 
@@ -269,7 +273,6 @@
             this.listBox3.Size = new System.Drawing.Size(60, 147);
             this.listBox3.TabIndex = 20;
             this.listBox3.Visible = false;
-            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.ListBox3_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -280,7 +283,6 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Длина";
             this.label8.Visible = false;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -290,7 +292,6 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "Элементы, начиная с головы (слева)";
             this.label9.Visible = false;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -308,7 +309,6 @@
             this.textBox4.Size = new System.Drawing.Size(38, 20);
             this.textBox4.TabIndex = 24;
             this.textBox4.Visible = false;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // listBox4
             // 
@@ -318,13 +318,12 @@
             this.listBox4.Size = new System.Drawing.Size(58, 134);
             this.listBox4.TabIndex = 25;
             this.listBox4.Visible = false;
-            this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 335);
+            this.ClientSize = new System.Drawing.Size(707, 330);
             this.Controls.Add(this.listBox4);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label10);
@@ -353,7 +352,6 @@
             this.Name = "Form1";
             this.RightToLeftLayout = true;
             this.Text = "Операции на списке";
-            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -372,7 +370,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
@@ -389,6 +387,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 

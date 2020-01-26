@@ -24,7 +24,6 @@ namespace ConsoleList
         string tailIfCountFromRightName = "Выделить хвост (справа налево)";
         string tailIfCountFromLeftName = "Выделить хвост (слева направо)";
         string mergeListsName = "Соединить списки";
-
         public int Size
         {
             get
@@ -107,7 +106,6 @@ namespace ConsoleList
                 return mergeListsName;
             }
         }
-
         //Свойство-индексатор для доступа к элементам списка по индексу
         public int this[int i]
         {
@@ -122,7 +120,6 @@ namespace ConsoleList
                 return t.Key;
             }
         }
-        
         //Добавить элемент справа.
         public void AddRight(int key_)
         {
@@ -152,7 +149,6 @@ namespace ConsoleList
             }
             return pred;
         }
-
         //Добавить элемент слева.
         public void AddLeft(int key_)
         {
@@ -168,6 +164,7 @@ namespace ConsoleList
                 size++;
             }
         }
+        //Очистить список
         public void CleanOutList()
         {
             first = null;
@@ -224,7 +221,6 @@ namespace ConsoleList
             }
             return headKey;
         }
-
         public bool IsListEmpty() //если пустой - истина
         {
             if (size == 0)
@@ -236,7 +232,7 @@ namespace ConsoleList
                 return false;
             }
         }
-
+        //Выделить хвост, когда голова слева (слева направо)
         public ListNodes TailIfCountFromLeft()
         {
             int headKey = 0;
@@ -252,6 +248,7 @@ namespace ConsoleList
             }
             return this;
         }
+        //Выделить хвост, когда голова справа (справа налево)
         public ListNodes TailIfCountFromRight()
         {
             int headKey = 0;
@@ -268,6 +265,7 @@ namespace ConsoleList
             }
             return this;
         }
+        //Соединить два списка
         public void MergeLists(ListNodes MyList)
         {
             for (int i = 1; i <= MyList.Size; i++)

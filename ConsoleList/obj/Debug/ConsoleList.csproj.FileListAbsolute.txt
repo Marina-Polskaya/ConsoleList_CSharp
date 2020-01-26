@@ -15,3 +15,4 @@ C:\Users\Marina\ConsoleList_CSharp\ConsoleList\obj\Debug\ConsoleList.Properties.
 C:\Users\Marina\ConsoleList_CSharp\ConsoleList\obj\Debug\ConsoleList.csproj.GenerateResource.cache
 C:\Users\Marina\ConsoleList_CSharp\ConsoleList\obj\Debug\ConsoleList.exe
 C:\Users\Marina\ConsoleList_CSharp\ConsoleList\obj\Debug\ConsoleList.pdb
+C:\Users\Marina\ConsoleList_CSharp\ConsoleList\obj\Debug\ConsoleList.Form2.resources
